@@ -1,0 +1,28 @@
+//Given an array of n[] of size a and integer k.Find the maximum for each and every contiguous subarray of size k.
+
+import java.util.Scanner;
+public class subarray {
+
+
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        int n[] =new int[9];
+        
+        int k=input.nextInt();
+        System.out.println("size"+k);
+        int max=0;
+        for(int i=0;i<9;i++){
+            n[i]=input.nextInt();
+        }
+        for(int i=0;i<=n.length-k;i++){
+            max=n[i];
+            for(int j=i+1;j<=i+k-1;j++){
+                max = Math.max(max, n[j]);
+            
+            }
+            System.out.print(max+" ");
+            
+        }
+        
+    }
+}
